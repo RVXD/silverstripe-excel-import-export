@@ -234,7 +234,7 @@ class ExcelGridFieldExportButton implements
         }
 
         $list = $items;
-        $limit = ExcelImportExport::$limit_exports;
+        $limit = ExcelImportExport::config()->limit_exports;
         if ($list instanceof DataList) {
             if ($this->isLimited && $limit > 0) {
                 $list = $list->limit($limit);
